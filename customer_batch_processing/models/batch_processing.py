@@ -23,3 +23,9 @@ class BatchProcessing(models.Model):
     city = fields.Char(string='city')
     state_id = fields.Many2one("res.country.state", string='State', ondelete='restrict')
     country_id = fields.Many2one('res.country', string='Country', ondelete='restrict')
+
+    def action_approved_request(self):
+        '''
+        This method will calculate the duration between specified days
+        '''
+        print (self,"-----------self---------")
